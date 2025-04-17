@@ -13,19 +13,16 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
 
   {
-    files: ["**/*.ts", "**/*.tsx"],
+    files: [""],
     languageOptions: {
       parserOptions: {
         project: "./tsconfig.json",
       },
     },
     rules: {
-      // ❌ Ignore unused vars
       "@typescript-eslint/no-unused-vars": "off",
       "no-unused-vars": "off",
-
-      // ✅ (Optional) loosen other common rules
-      "react-hooks/exhaustive-deps": "warn", // instead of error
+      "react-hooks/exhaustive-deps": "warn",
       "react/no-unescaped-entities": "off",
     },
   },
