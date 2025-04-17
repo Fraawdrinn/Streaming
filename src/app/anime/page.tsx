@@ -4,7 +4,7 @@ import AnimeList from '@/components/animelist'
 
 
 export default async function Page() {
-  const cookieStore = await cookies()
+  const cookieStore = cookies()
   const supabase = createClient(cookieStore)
 
   const { data: animes } = await supabase.from('anime').select()
